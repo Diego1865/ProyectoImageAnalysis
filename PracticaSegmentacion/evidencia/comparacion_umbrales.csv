@@ -1,0 +1,25 @@
+﻿image,stage,method,threshold,raw_count,count,area,perimeter
+monedas_separadas,Original,Otsu,179.0,16,3,5793,653.85
+monedas_separadas,Original,Kapur,201.0,18,3,7181,604.73
+monedas_separadas,Original,Minimo,220.0,14,3,20111,936.46
+monedas_separadas,Original,Media,210.21,73,4,11027,1426.95
+monedas_separadas,Mediana 5,Otsu,183.0,3,3,6536,694.1
+monedas_separadas,Mediana 5,Kapur,204.0,6,3,7640,558.6
+monedas_separadas,Mediana 5,Minimo,220.0,3,3,20312,895.25
+monedas_separadas,Mediana 5,Media,210.26,9,3,11310,1125.03
+monedas_separadas,Mediana 5 + gamma 0.7,Otsu,200.0,3,3,6267,744.37
+monedas_separadas,Mediana 5 + gamma 0.7,Kapur,216.0,3,3,7565,555.53
+monedas_separadas,Mediana 5 + gamma 0.7,Minimo,211.0,3,3,7287,549.19
+monedas_separadas,Mediana 5 + gamma 0.7,Media,222.16,11,3,9904,858.69
+monedas_juntas,Original,Otsu,173.0,12,2,7430,689.21
+monedas_juntas,Original,Kapur,197.0,21,1,9116,609.27
+monedas_juntas,Original,Minimo,192.0,9,2,8845,718.52
+monedas_juntas,Original,Media,201.2,30,2,10785,851.7
+monedas_juntas,Mediana 5,Otsu,177.0,2,2,8392,593.81
+monedas_juntas,Mediana 5,Kapur,198.0,5,1,9463,549.09
+monedas_juntas,Mediana 5,Minimo,193.0,1,1,9306,558.4
+monedas_juntas,Mediana 5,Media,201.17,2,2,11045,748.58
+monedas_juntas,Mediana 5 + gamma 0.7,Otsu,195.0,3,2,8081,650.1
+monedas_juntas,Mediana 5 + gamma 0.7,Kapur,213.0,2,1,9428,551.33
+monedas_juntas,Mediana 5 + gamma 0.7,Minimo,209.0,1,1,9267,573.47
+monedas_juntas,Mediana 5 + gamma 0.7,Media,215.16,5,2,10004,659.95

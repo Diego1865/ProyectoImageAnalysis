@@ -1,0 +1,655 @@
+{
+  "roi_xywh": [
+    490,
+    280,
+    125,
+    330
+  ],
+  "min_area": 150,
+  "seed": 2026,
+  "connectivity": 8,
+  "versions": {
+    "python": "3.14.6",
+    "opencv": "5.0.0",
+    "numpy": "2.5.3"
+  },
+  "images": {
+    "monedas_separadas": {
+      "shape": [
+        667,
+        1280
+      ],
+      "source_mean": 210.21,
+      "source_min": 50,
+      "source_max": 255,
+      "thresholds": [
+        {
+          "image": "monedas_separadas",
+          "stage": "Original",
+          "method": "Otsu",
+          "threshold": 179.0,
+          "raw_count": 16,
+          "count": 3,
+          "area": 5793,
+          "perimeter": 653.85
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Original",
+          "method": "Kapur",
+          "threshold": 201.0,
+          "raw_count": 18,
+          "count": 3,
+          "area": 7181,
+          "perimeter": 604.73
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Original",
+          "method": "Minimo",
+          "threshold": 220.0,
+          "raw_count": 14,
+          "count": 3,
+          "area": 20111,
+          "perimeter": 936.46
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Original",
+          "method": "Media",
+          "threshold": 210.21,
+          "raw_count": 73,
+          "count": 4,
+          "area": 11027,
+          "perimeter": 1426.95
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5",
+          "method": "Otsu",
+          "threshold": 183.0,
+          "raw_count": 3,
+          "count": 3,
+          "area": 6536,
+          "perimeter": 694.1
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5",
+          "method": "Kapur",
+          "threshold": 204.0,
+          "raw_count": 6,
+          "count": 3,
+          "area": 7640,
+          "perimeter": 558.6
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5",
+          "method": "Minimo",
+          "threshold": 220.0,
+          "raw_count": 3,
+          "count": 3,
+          "area": 20312,
+          "perimeter": 895.25
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5",
+          "method": "Media",
+          "threshold": 210.26,
+          "raw_count": 9,
+          "count": 3,
+          "area": 11310,
+          "perimeter": 1125.03
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Otsu",
+          "threshold": 200.0,
+          "raw_count": 3,
+          "count": 3,
+          "area": 6267,
+          "perimeter": 744.37
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Kapur",
+          "threshold": 216.0,
+          "raw_count": 3,
+          "count": 3,
+          "area": 7565,
+          "perimeter": 555.53
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Minimo",
+          "threshold": 211.0,
+          "raw_count": 3,
+          "count": 3,
+          "area": 7287,
+          "perimeter": 549.19
+        },
+        {
+          "image": "monedas_separadas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Media",
+          "threshold": 222.16,
+          "raw_count": 11,
+          "count": 3,
+          "area": 9904,
+          "perimeter": 858.69
+        }
+      ],
+      "brightness": [
+        {
+          "method": "uniforme",
+          "mean": 132.92,
+          "min": 0,
+          "max": 255,
+          "threshold": 133.0,
+          "count": 4,
+          "raw_count": 52
+        },
+        {
+          "method": "exponencial",
+          "mean": 142.16,
+          "min": 45,
+          "max": 161,
+          "threshold": 125.0,
+          "count": 4,
+          "raw_count": 21
+        },
+        {
+          "method": "rayleigh_guia",
+          "mean": 230.65,
+          "min": 113,
+          "max": 255,
+          "threshold": 210.0,
+          "count": 4,
+          "raw_count": 25
+        },
+        {
+          "method": "hipercubica",
+          "mean": 132.33,
+          "min": 0,
+          "max": 255,
+          "threshold": 93.0,
+          "count": 3,
+          "raw_count": 13
+        },
+        {
+          "method": "logaritmica",
+          "mean": 245.36,
+          "min": 181,
+          "max": 255,
+          "threshold": 236.0,
+          "count": 4,
+          "raw_count": 27
+        },
+        {
+          "method": "potencia_2",
+          "mean": 177.65,
+          "min": 10,
+          "max": 255,
+          "threshold": 137.0,
+          "count": 3,
+          "raw_count": 14
+        },
+        {
+          "method": "gamma_07",
+          "mean": 222.04,
+          "min": 82,
+          "max": 255,
+          "threshold": 197.0,
+          "count": 3,
+          "raw_count": 15
+        },
+        {
+          "method": "gamma_15",
+          "mean": 192.78,
+          "min": 22,
+          "max": 255,
+          "threshold": 156.0,
+          "count": 3,
+          "raw_count": 10
+        },
+        {
+          "method": "desplazamiento_30",
+          "mean": 237.06,
+          "min": 80,
+          "max": 255,
+          "threshold": 206.0,
+          "count": 3,
+          "raw_count": 21
+        },
+        {
+          "method": "desplazamiento_m30",
+          "mean": 180.21,
+          "min": 20,
+          "max": 225,
+          "threshold": 149.0,
+          "count": 3,
+          "raw_count": 16
+        },
+        {
+          "method": "contraccion",
+          "mean": 178.93,
+          "min": 104,
+          "max": 200,
+          "threshold": 164.0,
+          "count": 3,
+          "raw_count": 16
+        },
+        {
+          "method": "expansion",
+          "mean": 199.29,
+          "min": 0,
+          "max": 255,
+          "threshold": 160.0,
+          "count": 3,
+          "raw_count": 16
+        }
+      ],
+      "noise": [
+        {
+          "noise": "Sal y pimienta",
+          "filtering": "Sin filtro",
+          "mae": 3.583,
+          "threshold": 170.0,
+          "raw_count": 464,
+          "count": 3
+        },
+        {
+          "noise": "Sal y pimienta",
+          "filtering": "Mediana 5",
+          "mae": 3.435,
+          "threshold": 183.0,
+          "raw_count": 4,
+          "count": 3
+        },
+        {
+          "noise": "Sal y pimienta",
+          "filtering": "Gaussiano 5",
+          "mae": 5.742,
+          "threshold": 183.0,
+          "raw_count": 108,
+          "count": 3
+        },
+        {
+          "noise": "Gaussiano",
+          "filtering": "Sin filtro",
+          "mae": 11.774,
+          "threshold": 179.0,
+          "raw_count": 251,
+          "count": 3
+        },
+        {
+          "noise": "Gaussiano",
+          "filtering": "Mediana 5",
+          "mae": 5.919,
+          "threshold": 183.0,
+          "raw_count": 3,
+          "count": 3
+        },
+        {
+          "noise": "Gaussiano",
+          "filtering": "Gaussiano 5",
+          "mae": 5.502,
+          "threshold": 184.0,
+          "raw_count": 3,
+          "count": 3
+        }
+      ],
+      "final": {
+        "threshold": 200.0,
+        "raw_count": 3,
+        "count": 3,
+        "regions": [
+          {
+            "area": 1722,
+            "perimeter": 152.95,
+            "cx": 47.05,
+            "cy": 41.14,
+            "number": 1
+          },
+          {
+            "area": 2951,
+            "perimeter": 205.24,
+            "cx": 56.32,
+            "cy": 155.52,
+            "number": 2
+          },
+          {
+            "area": 2474,
+            "perimeter": 185.34,
+            "cx": 55.65,
+            "cy": 281.48,
+            "number": 3
+          }
+        ],
+        "area": 7147,
+        "perimeter": 543.53
+      },
+      "order_max_difference": 0
+    },
+    "monedas_juntas": {
+      "shape": [
+        687,
+        1280
+      ],
+      "source_mean": 201.2,
+      "source_min": 38,
+      "source_max": 254,
+      "thresholds": [
+        {
+          "image": "monedas_juntas",
+          "stage": "Original",
+          "method": "Otsu",
+          "threshold": 173.0,
+          "raw_count": 12,
+          "count": 2,
+          "area": 7430,
+          "perimeter": 689.21
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Original",
+          "method": "Kapur",
+          "threshold": 197.0,
+          "raw_count": 21,
+          "count": 1,
+          "area": 9116,
+          "perimeter": 609.27
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Original",
+          "method": "Minimo",
+          "threshold": 192.0,
+          "raw_count": 9,
+          "count": 2,
+          "area": 8845,
+          "perimeter": 718.52
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Original",
+          "method": "Media",
+          "threshold": 201.2,
+          "raw_count": 30,
+          "count": 2,
+          "area": 10785,
+          "perimeter": 851.7
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5",
+          "method": "Otsu",
+          "threshold": 177.0,
+          "raw_count": 2,
+          "count": 2,
+          "area": 8392,
+          "perimeter": 593.81
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5",
+          "method": "Kapur",
+          "threshold": 198.0,
+          "raw_count": 5,
+          "count": 1,
+          "area": 9463,
+          "perimeter": 549.09
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5",
+          "method": "Minimo",
+          "threshold": 193.0,
+          "raw_count": 1,
+          "count": 1,
+          "area": 9306,
+          "perimeter": 558.4
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5",
+          "method": "Media",
+          "threshold": 201.17,
+          "raw_count": 2,
+          "count": 2,
+          "area": 11045,
+          "perimeter": 748.58
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Otsu",
+          "threshold": 195.0,
+          "raw_count": 3,
+          "count": 2,
+          "area": 8081,
+          "perimeter": 650.1
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Kapur",
+          "threshold": 213.0,
+          "raw_count": 2,
+          "count": 1,
+          "area": 9428,
+          "perimeter": 551.33
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Minimo",
+          "threshold": 209.0,
+          "raw_count": 1,
+          "count": 1,
+          "area": 9267,
+          "perimeter": 573.47
+        },
+        {
+          "image": "monedas_juntas",
+          "stage": "Mediana 5 + gamma 0.7",
+          "method": "Media",
+          "threshold": 215.16,
+          "raw_count": 5,
+          "count": 2,
+          "area": 10004,
+          "perimeter": 659.95
+        }
+      ],
+      "brightness": [
+        {
+          "method": "uniforme",
+          "mean": 130.43,
+          "min": 0,
+          "max": 255,
+          "threshold": 128.0,
+          "count": 2,
+          "raw_count": 23
+        },
+        {
+          "method": "exponencial",
+          "mean": 137.84,
+          "min": 35,
+          "max": 161,
+          "threshold": 122.0,
+          "count": 3,
+          "raw_count": 25
+        },
+        {
+          "method": "rayleigh_guia",
+          "mean": 225.33,
+          "min": 98,
+          "max": 254,
+          "threshold": 206.0,
+          "count": 3,
+          "raw_count": 23
+        },
+        {
+          "method": "hipercubica",
+          "mean": 115.22,
+          "min": 0,
+          "max": 251,
+          "threshold": 82.0,
+          "count": 2,
+          "raw_count": 9
+        },
+        {
+          "method": "logaritmica",
+          "mean": 243.07,
+          "min": 168,
+          "max": 255,
+          "threshold": 234.0,
+          "count": 3,
+          "raw_count": 35
+        },
+        {
+          "method": "potencia_2",
+          "mean": 164.12,
+          "min": 6,
+          "max": 253,
+          "threshold": 130.0,
+          "count": 2,
+          "raw_count": 19
+        },
+        {
+          "method": "gamma_07",
+          "mean": 215.1,
+          "min": 67,
+          "max": 254,
+          "threshold": 192.0,
+          "count": 2,
+          "raw_count": 15
+        },
+        {
+          "method": "gamma_15",
+          "mean": 181.14,
+          "min": 15,
+          "max": 254,
+          "threshold": 147.0,
+          "count": 2,
+          "raw_count": 15
+        },
+        {
+          "method": "desplazamiento_30",
+          "mean": 230.32,
+          "min": 68,
+          "max": 255,
+          "threshold": 202.0,
+          "count": 2,
+          "raw_count": 13
+        },
+        {
+          "method": "desplazamiento_m30",
+          "mean": 171.2,
+          "min": 8,
+          "max": 224,
+          "threshold": 143.0,
+          "count": 2,
+          "raw_count": 12
+        },
+        {
+          "method": "contraccion",
+          "mean": 174.66,
+          "min": 98,
+          "max": 200,
+          "threshold": 161.0,
+          "count": 2,
+          "raw_count": 12
+        },
+        {
+          "method": "expansion",
+          "mean": 192.66,
+          "min": 0,
+          "max": 255,
+          "threshold": 159.0,
+          "count": 2,
+          "raw_count": 12
+        }
+      ],
+      "noise": [
+        {
+          "noise": "Sal y pimienta",
+          "filtering": "Sin filtro",
+          "mae": 3.633,
+          "threshold": 166.0,
+          "raw_count": 434,
+          "count": 3
+        },
+        {
+          "noise": "Sal y pimienta",
+          "filtering": "Mediana 5",
+          "mae": 3.868,
+          "threshold": 177.0,
+          "raw_count": 3,
+          "count": 2
+        },
+        {
+          "noise": "Sal y pimienta",
+          "filtering": "Gaussiano 5",
+          "mae": 5.993,
+          "threshold": 176.0,
+          "raw_count": 68,
+          "count": 2
+        },
+        {
+          "noise": "Gaussiano",
+          "filtering": "Sin filtro",
+          "mae": 11.89,
+          "threshold": 172.0,
+          "raw_count": 199,
+          "count": 2
+        },
+        {
+          "noise": "Gaussiano",
+          "filtering": "Mediana 5",
+          "mae": 6.251,
+          "threshold": 177.0,
+          "raw_count": 4,
+          "count": 2
+        },
+        {
+          "noise": "Gaussiano",
+          "filtering": "Gaussiano 5",
+          "mae": 5.785,
+          "threshold": 177.0,
+          "raw_count": 3,
+          "count": 2
+        }
+      ],
+      "final": {
+        "threshold": 195.0,
+        "raw_count": 2,
+        "count": 2,
+        "regions": [
+          {
+            "area": 5654,
+            "perimeter": 355.99,
+            "cx": 65.31,
+            "cy": 94.68,
+            "number": 1
+          },
+          {
+            "area": 3116,
+            "perimeter": 208.17,
+            "cx": 65.26,
+            "cy": 188.54,
+            "number": 2
+          }
+        ],
+        "area": 8770,
+        "perimeter": 564.16
+      },
+      "order_max_difference": 0
+    }
+  }
+}

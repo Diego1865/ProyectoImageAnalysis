@@ -1,2 +1,4 @@
 ./Practica1
 ./Practica2
+__pycache__/
+*.py[cod]

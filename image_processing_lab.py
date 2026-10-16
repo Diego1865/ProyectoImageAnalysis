@@ -3,9 +3,9 @@ IMAGE PROCESSING LABORATORY - ESCOM
 Aplicación integradora para prácticas de Análisis de Imágenes.
 
 Integra:
-- Práctica 1: carga, RGB, escala de grises, histograma, HSV,
-  binarización fija y Otsu.
-- Práctica 2: pseudocolor con mapas OpenCV y personalizados.
+- Práctica 1: pseudocolor con mapas OpenCV y personalizados.
+- Práctica 2: RGB, grises, histograma y HSV.
+- Segmentación, ruido, operaciones lógicas/relacionales y miniproyecto ECC.
 
 Diseñada como base modular para agregar futuras prácticas.
 """
@@ -21,6 +21,8 @@ import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 from PIL import Image, ImageTk
 
+from image_lab.experiment_ui import ExperimentMixin
+
 
 APP_TITLE = "IMAGE PROCESSING LABORATORY - ESCOM"
 CLASSIC_BG = "#d4d0c8"
@@ -30,7 +32,7 @@ TITLE_BG = "#0a246a"
 TITLE_FG = "white"
 
 
-class ImageProcessingLab:
+class ImageProcessingLab(ExperimentMixin):
     def __init__(self, root):
         self.root = root
         self.root.title(APP_TITLE)
@@ -58,7 +60,7 @@ class ImageProcessingLab:
         # Información usada para traducir coordenadas del canvas a píxeles
         self.canvas_maps = {}
 
-        # Mapas de pseudocolor heredados de la práctica 2
+        # Mapas de pseudocolor de la práctica 1
         self.colormaps = [
             "JET",
             "HOT",
@@ -114,10 +116,7 @@ class ImageProcessingLab:
         menu_image.add_command(label="Componentes RGB", command=self.show_rgb_components)
         menu_image.add_command(label="Componentes HSV", command=self.show_hsv_components)
         menu_image.add_command(label="Histograma de intensidad", command=self.show_histogram)
-        menu_image.add_separator()
-        menu_image.add_command(label="Binarización por umbral", command=self.apply_threshold)
-        menu_image.add_command(label="Binarización automática Otsu", command=self.apply_otsu)
-        menubar.add_cascade(label="Imagen", menu=menu_image)
+        menubar.add_cascade(label="Práctica 2", menu=menu_image)
 
         menu_colors = tk.Menu(menubar, tearoff=0)
         for cmap_name in self.colormaps:
@@ -125,13 +124,13 @@ class ImageProcessingLab:
                 label=cmap_name,
                 command=lambda name=cmap_name: self.apply_pseudocolor(name),
             )
-        menubar.add_cascade(label="Colores", menu=menu_colors)
+        menubar.add_cascade(label="Práctica 1 - Pseudocolor", menu=menu_colors)
+
+        self.build_experiment_menu(menubar)
 
         menu_filters = tk.Menu(menubar, tearoff=0)
-        menu_filters.add_command(
-            label="Módulo preparado para futuras prácticas...",
-            command=lambda: self.future_feature("Filtros"),
-        )
+        menu_filters.add_command(label="Mediana", command=lambda: self.filter_current('median'))
+        menu_filters.add_command(label="Gaussiano", command=lambda: self.filter_current('gaussian'))
         menubar.add_cascade(label="Filtros", menu=menu_filters)
 
         menu_edges = tk.Menu(menubar, tearoff=0)
@@ -162,13 +161,13 @@ class ImageProcessingLab:
         self._tool_button(file_group, "Guardar", self.save_result, 8)
         self._tool_button(file_group, "Reset", self.restore_original, 8)
 
-        tools_group = self._toolbar_group(toolbar, "Herramientas")
+        tools_group = self._toolbar_group(toolbar, "Práctica 2")
         self._tool_button(tools_group, "Grises", self.convert_to_gray, 8)
         self._tool_button(tools_group, "RGB", self.show_rgb_components, 6)
         self._tool_button(tools_group, "HSV", self.show_hsv_components, 6)
         self._tool_button(tools_group, "Hist.", self.show_histogram, 6)
 
-        colors_group = self._toolbar_group(toolbar, "Colores")
+        colors_group = self._toolbar_group(toolbar, "Práctica 1")
         self.toolbar_cmap = ttk.Combobox(
             colors_group,
             values=self.colormaps,
@@ -1023,7 +1022,9 @@ class ImageProcessingLab:
             "• Escala de grises\n"
             "• Histograma\n"
             "• Binarización fija y Otsu\n"
-            "• Pseudocolor\n\n"
+            "• Práctica 1: pseudocolor\n"
+            "• Miniproyecto: ruido, filtros, operaciones y ECC V4/V8\n"
+            "• Códigos de cadena y exportación de evidencia\n\n"
             "La arquitectura está preparada para agregar filtros, bordes y nuevas prácticas.",
         )
 
